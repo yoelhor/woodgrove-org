@@ -1,0 +1,48 @@
+{
+  "id": "did:web:woodgroveorg.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:woodgroveorg.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://woodgroveorg.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/ca9158c3-2d0c-4c93-99c4-f4a001c35c11"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#e0cff9d0524b4e1bbf747d52dd789663vcSigningKey-1283d",
+      "controller": "did:web:woodgroveorg.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "SZU1IPfRg54nI72V707O8jEOahTjdIZn6MUKQV1oyFM",
+        "y": "29tb7KMJexpCBNuBugHn75pEp3mCcI9hfQUX8dErMik"
+      }
+    }
+  ],
+  "authentication": [
+    "#e0cff9d0524b4e1bbf747d52dd789663vcSigningKey-1283d"
+  ],
+  "assertionMethod": [
+    "#e0cff9d0524b4e1bbf747d52dd789663vcSigningKey-1283d"
+  ]
+}
